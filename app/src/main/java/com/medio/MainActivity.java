@@ -26,7 +26,6 @@ public class MainActivity extends Activity {
                 Log.d("i",String.valueOf(i));
             }
         }
-        Toast.makeText(this,new String(a, 0, a.length),Toast.LENGTH_LONG).show();
     }
 
     @Override
