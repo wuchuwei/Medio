@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
                 tmp = a[i];
                 a[i]=a[i+1];
                 a[i+1] = tmp;
-                Log.d("i",String.valueOf(i)); 
+                Log.d("i",String.valueOf(i));
             }
         }
     }
