@@ -27,8 +27,6 @@ public class MainActivity extends Activity {
             }
         }
         Toast.makeText(this,new String(a, 0, a.length),Toast.LENGTH_LONG).show();
-        SoftReference  soft = new SoftReference(new String("sldkfdsjl"));
-        soft = null;
     }
 
     @Override
