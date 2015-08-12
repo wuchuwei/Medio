@@ -23,11 +23,9 @@ public class MainActivity extends Activity {
                 tmp = a[i];
                 a[i]=a[i+1];
                 a[i+1] = tmp;
-                Log.d("i",String.valueOf(i));
+                Log.d("i",String.valueOf(i)); 
             }
         }
-        Toast.makeText(this,new String(a, 0, a.length),Toast.LENGTH_LONG).show();
-        SoftReference  soft = new SoftReference(new String("sldkfdsjl"));
     }
 
     @Override
