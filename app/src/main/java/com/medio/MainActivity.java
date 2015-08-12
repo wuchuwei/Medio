@@ -1,12 +1,11 @@
 package com.medio;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
-import android.widget.Toast;
-
-import java.lang.ref.SoftReference;
 
 public class MainActivity extends Activity {
     @Override
@@ -15,17 +14,10 @@ public class MainActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE) ;
 
         setContentView(R.layout.activity_main);
-        int a[] = {1,4,3,7,34,556,22,44,222,553,124,13,3,54};
-        int i ;
-        int tmp;
-        for (i=0;i<a.length-1;i++){
-            if (a[i]>a[i+1]){
-                tmp = a[i];
-                a[i]=a[i+1];
-                a[i+1] = tmp;
-                Log.d("i",String.valueOf(i)); 
-            }
-        }
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        String filePath = "/sdcard/11.apk";
+        i.setDataAndType(Uri.parse("file://" + filePath), "application/vnd.android.package-archive");
+        this.startActivity(i);
     }
 
     @Override
